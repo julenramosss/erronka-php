@@ -1,8 +1,8 @@
 <?php
 return [
-    'base_url' => 'http://10.23.26.64:3001',
+    'base_url' => 'https://api.tolosaerronka.com',
     'tracking_endpoint' => '/api/tracking',
     'login_url' => '/login',
-    'support_email' => 'soporte@pakag.com',
+    'support_email' => 'support@tolosaerronka.com',
     'request_timeout_seconds' => 10,
 ];
