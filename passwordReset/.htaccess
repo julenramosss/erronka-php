@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Sirve archivos y carpetas existentes tal cual.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Permite acceder como /TOKEN y lo traduce a index.php?token=TOKEN
+RewriteRule ^([^/]+)/?$ index.php?token=$1 [L,QSA]
