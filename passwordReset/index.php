@@ -107,6 +107,126 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $scene === 'form') {
     }
 }
 
+// ── Full-screen 404 for invalid / expired / missing tokens ───────────────
+if ($scene === 'expired') {
+    http_response_code(404);
+    ?><!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>404 — pakAG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-dark: #1a1626;
+    --accent-primary: #7c3aed;
+    --accent-hover: #6d28d9;
+    --text-primary: #f5f3ff;
+    --text-secondary: #a89dc4;
+  }
+  html, body {
+    height: 100%;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem;
+  }
+  .ambient-glow {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 36% 50% at 95% 10%, rgba(58,0,151,.75) 0%, transparent 65%),
+      radial-gradient(ellipse 70% 40% at 0% 0%,   rgba(91,12,217,.75) 0%, transparent 100%),
+      radial-gradient(ellipse 35% 40% at 5% 100%,  rgba(40,17,79,.55) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .card {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .num-404 {
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.04em;
+    font-size: clamp(8rem, 25vw, 14rem);
+    background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 50%, #3d2960 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    user-select: none;
+    margin-bottom: 1rem;
+  }
+  .card h2 {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: .5rem;
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .5rem .875rem;
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1.125rem;
+    font-weight: 500;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background .15s;
+  }
+  .back-btn:hover { background: var(--accent-hover); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="ambient-glow"></div>
+  <div class="card">
+    <div class="num-404">404</div>
+    <h2>Esta página no existe</h2>
+    <p>Parece que te has perdido en la ruta.<br/>Comprueba la URL o vuelve al inicio.</p>
+    <a class="back-btn" href="/">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>
+      </svg>
+      Volver al inicio
+    </a>
+  </div>
+</div>
+</body>
+</html>
+    <?php
+    exit;
+}
+
 http_response_code($pageHttpCode);
 ?><!doctype html>
 <html lang="eu">
