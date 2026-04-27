@@ -1,0 +1,98 @@
+<!-- =============================================
+     pakAG Landing Page DTD
+     Validates the structure of landing.xml
+     ============================================= -->
+
+<!ELEMENT landing (meta, nav, hero, stats, apps, howItWorks, tracking, roles, footer)>
+
+<!-- META -->
+<!ELEMENT meta (title, description, lang)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT lang (#PCDATA)>
+
+<!-- NAVIGATION -->
+<!ELEMENT nav (logo, links)>
+<!ELEMENT logo (brand, highlight)>
+<!ELEMENT brand (#PCDATA)>
+<!ELEMENT highlight (#PCDATA)>
+<!ELEMENT links (link+)>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link
+  href CDATA #REQUIRED
+  cta  (true|false) "false">
+
+<!-- HERO -->
+<!ELEMENT hero (tag, heading, headingEm, description, actions, scrollHint)>
+<!ELEMENT tag (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT headingEm (#PCDATA)>
+<!ELEMENT actions (primaryBtn, ghostBtn)>
+<!ELEMENT primaryBtn (#PCDATA)>
+<!ATTLIST primaryBtn href CDATA #REQUIRED>
+<!ELEMENT ghostBtn (#PCDATA)>
+<!ATTLIST ghostBtn href CDATA #REQUIRED>
+<!ELEMENT scrollHint (#PCDATA)>
+
+<!-- STATS -->
+<!ELEMENT stats (stat+)>
+<!ELEMENT stat (num, label)>
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT label (#PCDATA)>
+
+<!-- APPS SECTION -->
+<!ELEMENT apps (sectionLabel, sectionTitle, sectionDesc, appsGrid)>
+<!ELEMENT appsGrid (appCard+)>
+<!ELEMENT appCard (icon, cardTitle, cardDesc, badge)>
+<!ATTLIST appCard featured (true|false) "false">
+<!ELEMENT icon (#PCDATA)>
+<!ELEMENT cardTitle (#PCDATA)>
+<!ELEMENT cardDesc (#PCDATA)>
+<!ELEMENT badge (#PCDATA)>
+
+<!-- HOW IT WORKS -->
+<!ELEMENT howItWorks (sectionLabel, sectionTitle, steps)>
+<!ELEMENT steps (step+)>
+<!ELEMENT step (stepNum, stepTitle, stepDesc)>
+<!ATTLIST step accent (true|false) "false">
+<!ELEMENT stepNum (#PCDATA)>
+<!ELEMENT stepTitle (#PCDATA)>
+<!ELEMENT stepDesc (#PCDATA)>
+
+<!-- TRACKING -->
+<!ELEMENT tracking (trackingText, trackingWidget)>
+<!ELEMENT trackingText (sectionLabel, sectionTitle, trackingDesc, trackingBtn)>
+<!ELEMENT trackingDesc (#PCDATA)>
+<!ELEMENT trackingBtn (#PCDATA)>
+<!ATTLIST trackingBtn href CDATA #REQUIRED>
+<!ELEMENT trackingWidget (widgetTitle, trackingId, trackSteps)>
+<!ELEMENT widgetTitle (#PCDATA)>
+<!ELEMENT trackingId (#PCDATA)>
+<!ELEMENT trackSteps (trackStep+)>
+<!ELEMENT trackStep (trackStatus, trackLabel, trackTime)>
+<!ATTLIST trackStep state (done|active|pending) "pending">
+<!ELEMENT trackStatus (#PCDATA)>
+<!ELEMENT trackLabel (#PCDATA)>
+<!ELEMENT trackTime (#PCDATA)>
+
+<!-- ROLES -->
+<!ELEMENT roles (sectionLabel, sectionTitle, rolesGrid)>
+<!ELEMENT rolesGrid (roleCard+)>
+<!ELEMENT roleCard (roleEmoji, roleTitle, roleFeatures)>
+<!ELEMENT roleEmoji (#PCDATA)>
+<!ELEMENT roleTitle (#PCDATA)>
+<!ELEMENT roleFeatures (feature+)>
+<!ELEMENT feature (#PCDATA)>
+
+<!-- FOOTER -->
+<!ELEMENT footer (footerLogo, footerBrand, footerHighlight, copyright, domain)>
+<!ELEMENT footerLogo EMPTY>
+<!ELEMENT footerBrand (#PCDATA)>
+<!ELEMENT footerHighlight (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
+<!ELEMENT domain (#PCDATA)>
+
+<!-- Shared reusable elements -->
+<!ELEMENT sectionLabel (#PCDATA)>
+<!ELEMENT sectionTitle (#PCDATA)>
+<!ELEMENT sectionDesc (#PCDATA)>

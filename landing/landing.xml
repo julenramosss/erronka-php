@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE landing SYSTEM "landing.dtd">
+<?xml-stylesheet type="text/xsl" href="landing.xsl"?>
+<landing>
+
+  <meta>
+    <title>pakAG — Bidalketa Kudeaketa</title>
+    <description>pakAG bidalketak kudeatzeko plataforma osoa da. Administratzaileetatik banatzaileetara eta bezeroetara.</description>
+    <lang>eu</lang>
+  </meta>
+
+  <nav>
+    <logo>
+      <brand>pak</brand>
+      <highlight>AG</highlight>
+    </logo>
+    <links>
+      <link href="#apps">Aplikazioak</link>
+      <link href="#nola">Nola funtzionatzen du</link>
+      <link href="#jarraipena">Jarraipena</link>
+      <link href="#jarraipena" cta="true">Jarraitu bidalketa →</link>
+    </links>
+  </nav>
+
+  <hero>
+    <tag>Euskal Herria · Paquetería Digital</tag>
+    <heading>Bidalketa</heading>
+    <headingEm>adimentsua</headingEm>
+    <description>pakAG bidalketak kudeatzeko plataforma osoa da. Administratzaileetatik banatzaileetara eta bezeroetara. Dena pantaila batetik.</description>
+    <actions>
+      <primaryBtn href="#jarraipena">Jarraitu zure bidalketa →</primaryBtn>
+      <ghostBtn href="#apps">Ezagutu plataforma ↓</ghostBtn>
+    </actions>
+    <scrollHint>Scroll para descubrir</scrollHint>
+  </hero>
+
+  <stats>
+    <stat><num>3</num><label>Aplikazio mota</label></stat>
+    <stat><num>100%</num><label>Eskalagarria</label></stat>
+    <stat><num>∞</num><label>Pakete jarraipena</label></stat>
+    <stat><num>24/7</num><label>Erabilgarritasuna</label></stat>
+  </stats>
+
+  <apps>
+    <sectionLabel>Gure Plataforma</sectionLabel>
+    <sectionTitle>Aplikazio bat aktore bakoitzarentzat</sectionTitle>
+    <sectionDesc>Administradoreak, banatzaileak eta bezeroak: bakoitzak bere interfaze propioa du, bere beharretara egokitua.</sectionDesc>
+    <appsGrid>
+      <appCard featured="true">
+        <icon>🚐</icon>
+        <cardTitle>Aplikazio Web — Banatzaileak</cardTitle>
+        <cardDesc>Eguneko ibilbidea eskutik eramaten duen aplikazioa. Pakete guztiak ikusi, egoera eguneratu, mapan kokapena ikusi eta zuzenean Google Maps-era irekitzen da nabigaziorako. Mugikorretarako diseinatua.</cardDesc>
+        <badge>Web · React · Next.js</badge>
+      </appCard>
+      <appCard featured="false">
+        <icon>🖥️</icon>
+        <cardTitle>Mahaigaineko App — Administrazioa</cardTitle>
+        <cardDesc>Bulegoko ordenagailutarako tresna osoa. Erabiltzaileak, paketeak, ibilbideak eta txostenak kudeatu, dena leku batetik.</cardDesc>
+        <badge>Java · Swing</badge>
+      </appCard>
+      <appCard featured="false">
+        <icon>📦</icon>
+        <cardTitle>Jarraipena — Bezeroak</cardTitle>
+        <cardDesc>Konturik gabe eta instalaziorik gabe. Bezeroek esteka bakarrarekin beren paketea noiz iritsiko den jakin dezakete.</cardDesc>
+        <badge>Web · PHP · Publiko</badge>
+      </appCard>
+    </appsGrid>
+  </apps>
+
+  <howItWorks>
+    <sectionLabel>Prozesua</sectionLabel>
+    <sectionTitle>Pakete baten bizitza</sectionTitle>
+    <steps>
+      <step accent="true">
+        <stepNum>01</stepNum>
+        <stepTitle>Sorrera</stepTitle>
+        <stepDesc>Administrazioak paketea sortu eta bezeroak esteka automatikoa jasotzen du emailez.</stepDesc>
+      </step>
+      <step accent="false">
+        <stepNum>02</stepNum>
+        <stepTitle>Esleipena</stepTitle>
+        <stepDesc>Paketea banatzaile bati esleitu eta eguneko ibilbidean sartzen da automatikoki.</stepDesc>
+      </step>
+      <step accent="false">
+        <stepNum>03</stepNum>
+        <stepTitle>Bidalketa</stepTitle>
+        <stepDesc>Banatzaileak aplikaziotik ibilbidea jarraitu eta pakete bakoitzaren egoera eguneratzen du.</stepDesc>
+      </step>
+      <step accent="true">
+        <stepNum>04</stepNum>
+        <stepTitle>Entrega</stepTitle>
+        <stepDesc>Paketea entregatu eta bezeroak jakinarazpen automatikoa jasotzen du. Dena erregistratua.</stepDesc>
+      </step>
+    </steps>
+  </howItWorks>
+
+  <tracking>
+    <trackingText>
+      <sectionLabel>Jarraipena · Tracking</sectionLabel>
+      <sectionTitle>Zure paketea non dagoen jakin, beti.</sectionTitle>
+      <trackingDesc>Kontu sortu beharrik gabe. Email batean bidaltzen dizugun esteka berezi batetik, zure paketea denbora errealean jarraitu dezakezu. Sinplea, azkar, segurua.</trackingDesc>
+      <trackingBtn href="#">Jarraitu bidalketa →</trackingBtn>
+    </trackingText>
+    <trackingWidget>
+      <widgetTitle>Jarraipena · Demo</widgetTitle>
+      <trackingId>PKG-2025-TLR-004872-XQ</trackingId>
+      <trackSteps>
+        <trackStep state="done">
+          <trackStatus>✓</trackStatus>
+          <trackLabel>Paketea jaso da</trackLabel>
+          <trackTime>Apirilak 25 · 08:32</trackTime>
+        </trackStep>
+        <trackStep state="done">
+          <trackStatus>✓</trackStatus>
+          <trackLabel>Sailkatu eta prestatuta</trackLabel>
+          <trackTime>Apirilak 25 · 14:10</trackTime>
+        </trackStep>
+        <trackStep state="active">
+          <trackStatus>⟳</trackStatus>
+          <trackLabel>Bidalketaren ibilbidean</trackLabel>
+          <trackTime>Gaur · Donostia</trackTime>
+        </trackStep>
+        <trackStep state="pending">
+          <trackStatus></trackStatus>
+          <trackLabel>Entregatzeke</trackLabel>
+          <trackTime>Zain…</trackTime>
+        </trackStep>
+      </trackSteps>
+    </trackingWidget>
+  </tracking>
+
+  <roles>
+    <sectionLabel>Nor da pakAG-en erabiltzailea?</sectionLabel>
+    <sectionTitle>Bakoitzak bere tresna</sectionTitle>
+    <rolesGrid>
+      <roleCard>
+        <roleEmoji>🧑‍💼</roleEmoji>
+        <roleTitle>Administrazioa</roleTitle>
+        <roleFeatures>
+          <feature>Erabiltzaileak sortu eta kudeatu</feature>
+          <feature>Paketeak sortu eta esleitu</feature>
+          <feature>Ibilbideak planifikatu</feature>
+          <feature>Txostenak eta historikoa ikusi</feature>
+          <feature>Sistemaren kontrol osoa</feature>
+        </roleFeatures>
+      </roleCard>
+      <roleCard>
+        <roleEmoji>🚐</roleEmoji>
+        <roleTitle>Banatzailea</roleTitle>
+        <roleFeatures>
+          <feature>Eguneko ibilbidea ikusi</feature>
+          <feature>Pakete bakoitzaren xehetasunak</feature>
+          <feature>Egoera eguneratu errealean</feature>
+          <feature>Mapan kokapena ikusi</feature>
+          <feature>Google Maps nabigazio zuzena</feature>
+        </roleFeatures>
+      </roleCard>
+      <roleCard>
+        <roleEmoji>📬</roleEmoji>
+        <roleTitle>Bezeroa</roleTitle>
+        <roleFeatures>
+          <feature>Email automatikoa bidalketan</feature>
+          <feature>Esteka bakar eta segurua</feature>
+          <feature>Jarraipena errealean</feature>
+          <feature>Ez da konturik beharrezko</feature>
+          <feature>Jakinarazpen automatikoak</feature>
+        </roleFeatures>
+      </roleCard>
+    </rolesGrid>
+  </roles>
+
+  <footer>
+    <footerLogo/>
+    <footerBrand>pak</footerBrand>
+    <footerHighlight>AG</footerHighlight>
+    <copyright>© 2025 — Euskal Herriko bidalketa kudeaketa sistema</copyright>
+    <domain>tolosaerronka.es</domain>
+  </footer>
+
+</landing>

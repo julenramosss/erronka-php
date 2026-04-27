@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"F:\\\\Tolosa\\\\3.Maila\\\\Erronka\\\\Codigo\\\\ERRONKA_PHP\" | ForEach-Object { $_.FullName })",
+      "PowerShell(php --version 2>&1)"
+    ]
+  }
+}
